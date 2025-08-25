@@ -1,0 +1,3 @@
+# exercise 2
+print(6 * 7)
+

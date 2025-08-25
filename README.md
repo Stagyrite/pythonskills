@@ -1,20 +1,6 @@
 # Python Skills
 
-🐍 It's a Python course.
-
-## ASCII-ART
-
-```text
-  ======
-  =    =             0---0|
-  =    =     <---     /0\ |
-    ==                \_/_,
-==========
-=   ======
-==========
-
-SETTING SAIL TONIGHT. BE READY.
-```
+🐍 These are the solutions for a Python course.
 
 ## IDE
 
