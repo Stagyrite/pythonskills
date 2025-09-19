@@ -1,6 +1,6 @@
 # Python Skills
 
-🐍 These are the solutions for a Python course.
+🐍 These are the solutions for some Python courses.
 
 ## IDE
 
