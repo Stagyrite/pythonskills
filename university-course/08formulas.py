@@ -1,5 +1,3 @@
-import itertools
-
 class FormulaUnallowedException(BaseException):
 
     def __str__(self):
@@ -103,19 +101,20 @@ expression = Impl(Zmienna("x"), And(Zmienna("y"), ConstantTrue()))
 print(expression)
 print(expression.oblicz({ 'x' : True, 'y' : False}))
 
-def isTautology(formula : Formula, variableNames):
+def isTautology(formula, variables, depth=0, assignment={}):
 
-    valuations = [
-        dict(zip(variableNames, values))
-        for values in itertools.product([False, True], repeat=len(variableNames))
-    ]
+    if depth == len(variables):
+        return formula.oblicz(assignment)
 
-    for variables in valuations:
+    variableName = variables[depth]
+    assignment[variableName] = False
+    deeper = depth + 1
 
-        if not formula.oblicz(variables):
-            return False
+    if not isTautology(formula, variables, deeper, assignment):
+        return False
 
-    return True
+    assignment[variableName] = True
+    return isTautology(formula, variables, deeper, assignment)
 
 print(isTautology(expression, ["x", "y"]))
 expression = Or(Impl(Zmienna("x"), Zmienna("y")), Impl(Zmienna("x"), Not(Zmienna("y"))))
