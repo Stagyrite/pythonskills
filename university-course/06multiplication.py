@@ -1,6 +1,6 @@
 def tabliczka(x1, x2, y1, y2):
-    max = x2 * y2
-    width = len(str(max)) + 1
+    longest_value = str(x2 * y2)
+    width = len(longest_value) + 1
 
     for y in range(y1, y2 + 1):
 

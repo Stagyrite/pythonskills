@@ -1,10 +1,10 @@
-def pay(howMuch):
+def pay(how_much):
 
     for amount in (20, 10, 5, 2, 1):
-        amountSpent = howMuch // amount
+        amountSpent = how_much // amount
 
         if amountSpent > 0:
             print(amount, " x ", amountSpent)
-            howMuch %= amount
+            how_much %= amount
 
 pay(123)

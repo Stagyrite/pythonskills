@@ -8,14 +8,14 @@ def rozklad(n):
         if i * i > n:
             break
 
-        howMany = 0
+        how_many = 0
 
         while current % i == 0:
             current //= i
-            howMany += 1
+            how_many += 1
 
-        if howMany > 0:
-            result.append((i, howMany))
+        if how_many > 0:
+            result.append((i, how_many))
 
     return result
 
