@@ -4,8 +4,8 @@
 
 ## Courses
 
-* [udemy-course](udemy-course)[Udemy Course]
-* [university-course](university-course)[University Course]
+* [Udemy Course](udemy-course)
+* [University Course](university-course)
 
 ## IDE hints
 
